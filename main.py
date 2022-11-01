@@ -21,6 +21,11 @@ def clean_ssas_model_bim(model_file_path: Path, model_file_output_path: Path,):
             model = json.load(model_file)
 
         for table in model['model']['tables']:
+            # Set table name
+            if table['name'].isupper():
+                table['name'] = table['name'].lower().capitalize().replace('_', ' ')
+
+            # Set column name
             for column in table['columns']:
                 if column['name'].isupper():
                     column['name'] = column['name'].lower().capitalize().replace('_', ' ')
