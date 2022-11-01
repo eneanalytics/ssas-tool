@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ssas-tool"
+version = "0.1.0"
+description = "Utility script to clean Microsoft SSAS models. Basically convert uppercase columns to lowercase."
+authors = ["mikaelene <mikael.ene@eneanalytics.com>"]
+license = "mit"
+readme = "README.md"
+packages = [{include = "ssas_tool"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = "^0.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
