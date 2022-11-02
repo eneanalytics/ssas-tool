@@ -21,7 +21,11 @@ def clean_ssas_model_bim(
         ),
 ):
     """
-    Clean ssas model.bim
+    Clean your SSAS model file from all uppercase column names that often is the result of
+    reading data from a database such as Snowflake.
+    Input the path to the Model.bim file in the MODEL_FILE_PATH argument and then the path to the output
+    file in the MODEL_FILE_OUTPUT_PATH argument.
+
     """
     clean_ssas_model_bim(
         model_file_path,

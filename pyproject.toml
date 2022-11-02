@@ -19,4 +19,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-clean_bim = 'ssas_tool.cli:app'
+ssas-tool = 'ssas_tool.cli:app'
