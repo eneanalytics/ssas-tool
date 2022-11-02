@@ -9,14 +9,9 @@ Clean your SSAS model file from all uppercase column names that often is the
 
 ## Installation
 
-### Clone the repository
-
-
 ### With pip
-    pip install -r requirements.txt
+    pip install --user git+https://github.com/eneanalytics/ssas-tool
 
-### With poetry
-    poetry install
 
 ## Usage
 ```
