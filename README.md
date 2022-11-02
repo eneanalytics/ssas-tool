@@ -9,6 +9,9 @@ Clean your SSAS model file from all uppercase column names that often is the
 
 ## Installation
 
+### Clone the repository
+
+
 ### With pip
     pip install -r requirements.txt
 

@@ -1,20 +1,12 @@
-import typer
 import json
 
 from pathlib import Path
 
 
 def clean_ssas_model_bim(
-    model_file_path: Path = typer.Argument(
-        ..., help="The full path to the Model.bim file"
-    ),
-    model_file_output_path: Path = typer.Argument(
-        ..., help="The full path to where you want to store the processed file"
-    ),
-    rename_tables: bool = typer.Option(
-        False,
-        help="If you want to rename tables. It may mean that you have to reprocess them in SSAS",
-    ),
+    model_file_path: Path,
+    model_file_output_path: Path,
+    rename_tables: bool = False,
 ):
     """
     Clean your SSAS model file from all uppercase column names that often is the result of
@@ -53,6 +45,3 @@ def clean_ssas_model_bim(
     except Exception as e:
         print(e)
 
-
-if __name__ == "__main__":
-    typer.run(clean_ssas_model_bim)

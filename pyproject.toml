@@ -11,10 +11,12 @@ packages = [{include = "ssas_tool"}]
 python = "^3.8"
 typer = "^0.6.1"
 
-
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+clean_bim = 'ssas_tool.cli:app'
